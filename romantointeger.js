@@ -1,7 +1,7 @@
-s = "LVIII"
+s = "MCMXCIV"
 
 let roman = new Map([
-    [1, "I"],
+    ["I", 1],
     ["II", 2],
     ["III", 3],
     ["IV", 4],
@@ -10,32 +10,68 @@ let roman = new Map([
     ["X", 10],
     ["XL", 40],
     ["L", 50],
-    ["LC", 90],
+    ["XC", 90],
     ["C", 100],
     ["CD", 400],
     ["D", 500],
-    ["DM", 900],
+    ["CM", 900],
     ["M", 1000]
 ])
 
 const arr = s.split('');
 
-let number = 0
+let numb = 0
+let convert = []
 
-for (let i = 0; i < arr.length) {
+for (let i = 0; i < arr.length;) {
 
     value1 = arr[i]
     value2 = arr[i + 1]
+    special = value1 + value2
 
-    if value1 + value2 === IV || IX || XL || XC || LC || CD || CM {
+    if ((special) === ("IV")) {
         i += 2
+        console.log(special)
+        convert.push(special)
 
+    } else if ((special) === ("IX")) {
+        i += 2
+        console.log(special)
+        convert.push(special)
+
+    } else if ((special) === ("XL")) {
+        i += 2
+        console.log(special)
+        convert.push(special)
+
+    } else if ((special) === ("XC")) {
+        i += 2
+        console.log(special)
+        convert.push(special)
+
+    } else if ((special) === ("CD")) {
+        i += 2
+        console.log(special)
+        convert.push(special)
+
+    } else if ((special) === ("CM")) {
+        i += 2
+        console.log(special)
+        convert.push(special)
+
+    } else {
+        i++
+        console.log(value1)
+        convert.push(value1)
     }
-    else i++
+}
+
+for (let j = 0; j < convert.length;) {
+
+    numb += roman.get(convert[j])
+    console.log(numb)
+    j++
 }
 
 
-
-
-console.log(arr);
-console.log(arr.length)
+console.log(convert)
