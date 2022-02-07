@@ -1,3 +1,5 @@
+s = "LVIII"
+
 let roman = new Map([
     [1, "I"],
     ["II", 2],
@@ -16,7 +18,24 @@ let roman = new Map([
     ["M", 1000]
 ])
 
-console.log(roman.get("IV"));
+const arr = s.split('');
+
+let number = 0
+
+for (let i = 0; i < arr.length) {
+
+    value1 = arr[i]
+    value2 = arr[i + 1]
+
+    if value1 + value2 === IV || IX || XL || XC || LC || CD || CM {
+        i += 2
+
+    }
+    else i++
+}
 
 
-//Learning hashmaps
+
+
+console.log(arr);
+console.log(arr.length)
