@@ -2,19 +2,35 @@ strs = ["flower", "flow", "flight"]
 
 
 
-let strindex = 0
+// let strindex = 0
+
+wordnum = strs.length //0, 1 , 2 
+letternum = strs.forEach(item => item.length)
+wordchars = strs.forEach(item => item.forEach(item console.log(item)))
 
 
-for (let i = 0; i < strs.length; i++) {
-
-    console.log(strs[i])
-
-    for (let j = 0; j < strs[i].length; j++)[
-        console.log(strs[i][j])
-    ]
+strs.forEach(item => console.log(item));
 
 
-}
+
+
+// for (let i = 0; i < strs.length; i++) {
+
+
+//     console.log(strs[i])
+//     console.log(strs[i].length)
+
+
+//     for (let j = 0; j < strs[i].length; j++)[
+//         console.log(strs[i][j]),
+
+
+
+//     ]
+
+
+
+// }
 
 
 
